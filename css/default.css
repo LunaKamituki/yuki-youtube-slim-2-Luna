@@ -546,3 +546,8 @@ p,
 
 /* Center the "invidious" logo on the search page */
 #logo > h1 { text-align: center; }
+
+/* Luna Kamituki */
+#luna_Instance{
+text-align: center;
+}
