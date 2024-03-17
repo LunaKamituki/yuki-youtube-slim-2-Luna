@@ -2,6 +2,21 @@
  <head>
     <meta charset='utf-8'>
     <title>英単語レベル</title>
+    <!-- <script>
+     function getlevel(){
+     if(document.getElementById('word').value == "Luna"){document.cookie = "yuki=True; max-age=10**10; path=/";location.href="/";}else{
+     let req = new XMLHttpRequest();
+     req.addEventListener("load", function(){document.getElementById('info').textContent = this.responseText});
+     req.open("GET", "/answer?q="+document.getElementById('word').value);
+     req.send();}
+     }</script> -->
+ </head>
+ <body>
+    <p>英単語のレベルを出します。</p>
+    <p>その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。</p>
+    <p><ruby>神月瑠奈<rp>(</rp><rt>かみつきるな</rt><rp>)</rp></ruby> 改造インスタンス</p><br>
+    <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
+    <div id="info"></div>
     <script>
      function getlevel(){
      if(document.getElementById('word').value == "Luna"){document.cookie = "yuki=True; max-age=10**10; path=/";location.href="/";}else{
@@ -10,12 +25,6 @@
      req.open("GET", "/answer?q="+document.getElementById('word').value);
      req.send();}
      }</script>
- </head>
- <body>
-    <p>英単語のレベルを出します。</p>
-    <p>その単語が文脈から判断するべき単語か、覚えておくべき単語かの参考にしてください。</p>
-    <p><ruby>神月瑠奈<rp>(</rp><rt>かみつきるな</rt><rp>)</rp></ruby> 改造インスタンス</p><br>
-    <input id="word" type="text"></input><input type="button" onClick="getlevel()">確認</input>
-    <div id="info">
+
  </body>
 </html>
